@@ -65,12 +65,14 @@
         subText.classList.toggle("text-primary");
         if(label.innerHTML === 'Light Mode') {
           label.innerHTML = 'Dark Mode';
+          text.classList.remove("header-text");
           var i;
           for (i = 0; i < tags.length; i++) {
             tags[i].style.color = "#6566e6";
           }
         } else {
           label.innerHTML = 'Light Mode';
+          text.classList.add("header-text");
           var i;
           for (i = 0; i < tags.length; i++) {
             tags[i].style.color = "#fff";
