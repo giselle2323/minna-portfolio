@@ -22,7 +22,7 @@
             <div id="right-col" class="col-12 col-lg-6 bg-primary px-md-5 pt-5 d-flex flex-column">
               <div class="custom-control custom-switch" onchange="myFunction()">
                 <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                <label class="custom-control-label text-white" for="customSwitch1">Toggle theme</label>
+                <label id='label' class="custom-control-label text-secondary" for="customSwitch1">Light Mode</label>
               </div>
               <div class="w-100 d-flex flex-column px-md-20 py-16">
                <h4 class="text-secondary">Yakubu Aminat</h4>
@@ -58,11 +58,19 @@
          let element = document.getElementById('right-col');
          let text = document.getElementById('header-text');
          let subText = document.getElementById('sub-text');
+         let label = document.getElementById('label');
          element.classList.toggle("light-mode");
         //  text.classList.remove("text-white", "header-text");
          text.classList.toggle("text-secondary");
         //  subText.classList.remove("text-white");
          subText.classList.toggle("text-primary");
+
+         if(label.innerHTML === 'Light Mode') {
+          label.innerHTML = 'Dark Mode';
+         } else {
+          label.innerHTML = 'Light Mode';
+         }
+         
       }
       </script>
   </body>

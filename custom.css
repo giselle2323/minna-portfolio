@@ -19,9 +19,9 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.header-text {
+/* .header-text {
   text-shadow: 4px 4px 2px rgba(102, 103, 231, 1);
-}
+} */
 .bounce {
   -webkit-animation-name: bounce;
   animation-name: bounce;
