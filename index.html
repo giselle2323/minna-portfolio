@@ -55,22 +55,28 @@
     </div>
     <script>
       function myFunction() {
-         let element = document.getElementById('right-col');
-         let text = document.getElementById('header-text');
-         let subText = document.getElementById('sub-text');
-         let label = document.getElementById('label');
-         element.classList.toggle("light-mode");
-        //  text.classList.remove("text-white", "header-text");
-         text.classList.toggle("text-secondary");
-        //  subText.classList.remove("text-white");
-         subText.classList.toggle("text-primary");
-
-         if(label.innerHTML === 'Light Mode') {
+        let element = document.getElementById('right-col');
+        let text = document.getElementById('header-text');
+        let subText = document.getElementById('sub-text');
+        let label = document.getElementById('label');
+        let tags = document.getElementsByTagName('h6');
+        element.classList.toggle("light-mode");
+        text.classList.toggle("text-secondary");
+        subText.classList.toggle("text-primary");
+        if(label.innerHTML === 'Light Mode') {
           label.innerHTML = 'Dark Mode';
-         } else {
+          var i;
+          for (i = 0; i < tags.length; i++) {
+            tags[i].style.color = "#6566e6";
+          }
+        } else {
           label.innerHTML = 'Light Mode';
-         }
-         
+          var i;
+          for (i = 0; i < tags.length; i++) {
+            tags[i].style.color = "#fff";
+          }
+        }
+        
       }
       </script>
   </body>
