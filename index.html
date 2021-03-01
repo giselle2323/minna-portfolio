@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Minna</title>
-    <link rel="stylesheet" href="custom.css">
     <link rel="stylesheet" href="minna.css">
+    <link rel="stylesheet" href="custom.css">
+    
   </head>
   <body>
     <div class="root container-fluid p-0">
@@ -18,11 +19,15 @@
                 <img class="w-100 profile-img" src="./images/profile.jpg" alt="profile"/>
               </div>
             </div>
-            <div class="col-12 col-lg-6 bg-primary px-md-5 pt-20 d-flex flex-column">
+            <div id="right-col" class="col-12 col-lg-6 bg-primary px-md-5 pt-5 d-flex flex-column">
+              <div class="custom-control custom-switch" onchange="myFunction()">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                <label class="custom-control-label text-white" for="customSwitch1">Toggle theme</label>
+              </div>
               <div class="w-100 d-flex flex-column px-md-20 py-16">
                <h4 class="text-secondary">Yakubu Aminat</h4>
-               <h1 class="text-white py-4 header-text">Software Developer. Miss cat. Hiker.</h1>
-               <p class="text-white lead sub-text p-4 lobe">
+               <h1 id="header-text" class="text-white py-4 header-text">Software Developer. Miss cat. Hiker.</h1>
+               <p id="sub-text" class="text-white lead sub-text p-4 lobe">
                 Donec at libero id lectus porta dapibus eu in nibh. Cras id mauris sapien. Fusce viverra luctus urna ac rutrum. Duis semper elit eu mi facilisis eleifend. Donec semper, ipsum in malesuada congue, purus sem ullamcorper massa, sit amet lacinia nibh enim sed massa.
                </p>
                <div class="connect row d-flex text-white py-10 m-0">
@@ -44,9 +49,21 @@
             </div>
           </div>
           
-
+         
         </div>
       </section>
     </div>
+    <script>
+      function myFunction() {
+         let element = document.getElementById('right-col');
+         let text = document.getElementById('header-text');
+         let subText = document.getElementById('sub-text');
+         element.classList.toggle("light-mode");
+        //  text.classList.remove("text-white", "header-text");
+         text.classList.toggle("text-secondary");
+        //  subText.classList.remove("text-white");
+         subText.classList.toggle("text-primary");
+      }
+      </script>
   </body>
 </html>
